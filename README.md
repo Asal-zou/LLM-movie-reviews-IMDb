@@ -1,7 +1,7 @@
 # LLM Project
 
 ## Project Overview
-This project aims to develop a sentiment analysis tool using a Large Language Model (LLM). The primary objective was to determine the sentiment (positive or negative) of movie reviews from the IMDb dataset. This tool can help media companies and marketers understand consumer reactions and preferences, enabling better-targeted marketing strategies and content customization to enhance user engagement and satisfaction.
+This project aimed to develop a sentiment analysis tool using a Large Language Model (LLM). The primary objective was to determine the sentiment (positive or negative) of movie reviews from the IMDb dataset. This tool can help media companies and marketers understand consumer reactions and preferences, enabling better-targeted marketing strategies and content customization to enhance user engagement and satisfaction.
 
 ## Dataset
 **Source:** The dataset used in this project is the IMDb reviews dataset. It's widely employed for binary sentiment classification and consists of a balanced collection of movie reviews tagged as positive or negative. This makes it an excellent resource for both training and testing our sentiment analysis model.
