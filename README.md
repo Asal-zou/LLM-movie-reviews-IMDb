@@ -13,16 +13,22 @@ BERT (Bidirectional Encoder Representations from Transformers) is a pivotal mode
 
 ## Performance Metrics
 **Metrics Evaluated:**
-- **Accuracy:** Measures the proportion of correctly predicted sentiments against the total predictions.
-- **Precision:** Indicates the accuracy of positive sentiment predictions.
-- **Recall:** Reflects the ability of the model to correctly identify all relevant positive cases.
-- **F1 Score:** Balances precision and recall, especially useful in scenarios with imbalanced class distributions.
+- **Accuracy:** Measures the proportion of correctly predicted sentiments against the total predictions. This metric gives a general sense of the model’s performance by showing the overall correctness of predictions, which is particularly useful when the class distribution is balanced.
+- 
+- **Precision:** Indicates the accuracy of positive sentiment predictions. Precision is crucial in situations where the cost of false positives is high. It ensures that when the model predicts a positive sentiment, it is likely correct, which is important for applications like customer feedback analysis where false positives could lead to misguided actions.
+  
+- **Recall:** Reflects the ability of the model to correctly identify all relevant positive cases. High recall ensures that most positive sentiments are detected, which is critical for understanding overall customer satisfaction or identifying critical feedback.
+- 
+- **F1 Score:** Balances precision and recall, providing a single metric that accounts for both false positives and false negatives. This is particularly useful in scenarios with imbalanced class distributions, where accuracy alone might be misleading. The F1 score helps ensure that the model performs well in detecting positive sentiments while also maintaining a low false positive rate.
 
 ## Hyperparameters
 **Important Hyperparameters:**
-- **Learning Rate:** Set at 2e-5, crucial for how the model weights adjust relative to the error rate at each update.
-- **Batch Sizes:** Configured at 16 for both training and evaluation phases to optimize computational efficiency and manage memory usage effectively.
-- **Number of Epochs:** Limited to 1 to streamline the training process.
+- **Learning Rate:** Set at 2e-5, crucial for how the model weights adjust relative to the error rate at each update. 2e-5 was suggested to use in Hugging Face and worked the best with my model.
+- 
+- **Batch Sizes:** Configured at 16 for both training and evaluation phases to optimize computational efficiency and manage memory usage effectively. Smaller batch sizes can lead to more stable updates and allow for more frequent model updates, striking a balance between efficient computation and effective learning.
+  
+- **Number of Epochs:** Limited to 1 to streamline the training process. This decision is often based on prior experiments or resource constraints. Reducing the number of epochs helps in quicker model iterations and can prevent overfitting, especially in preliminary model evaluations.
+
 
 ## Results
 **DistilBERT Evaluation Results:**
